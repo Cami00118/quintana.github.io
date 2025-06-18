@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Ecología Marina</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e0f7fa;
+      color: #004d40;
+      padding: 20px;
+    }
+    form {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #b2dfdb;
+    }
+    button {
+      margin-top: 20px;
+      background-color: #00796b;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Formulario de Interés en Ecología Marina</h2>
+
+  <form id="formulario">
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="interes">¿Por qué te interesa la ecología marina?</label>
+    <textarea id="interes" name="interes" rows="4" required></textarea>
+
+    <label for="tema">Tema favorito sobre ecología marina:</label>
+    <select id="tema" name="tema">
+      <option value="especies">Especies marinas en peligro</option>
+      <option value="contaminacion">Contaminación del océano</option>
+      <option value="ecosistemas">Ecosistemas marinos</option>
+      <option value="clima">Cambio climático y océanos</option>
+    </select>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+    document.getElementById('formulario').addEventListener('submit', function(e) {
+      e.preventDefault(); // Evita que se recargue la página
+      alert('¡Gracias por tu interés en la ecología marina! Tu información ha sido enviada.');
+      this.reset(); // Opcional: limpia el formulario después del envío
+    });
+  </script>
+<a href="index.html">Volver al inicio</a>
+</body>
+</html>
+<p>Nombre:Lopez Quintana Alexa Camila</p>

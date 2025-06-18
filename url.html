@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Abrir URL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #800020;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #800020;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        button:hover {
+            background-color: #a8324a;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ir a una URL</h1>
+    <input type="text" id="urlInput" placeholder="Escribe una URL (ej: https://ejemplo.com)">
+    <button onclick="abrirURL()">Abrir</button>
+
+    <script>
+        function abrirURL() {
+            let url = document.getElementById("urlInput").value;
+            if (!url.startsWith("http")) {
+                url = "https://cami00118.github.io/lopez.github.io/anclaje.html"
+            }
+            window.open(url, "_blank");
+        }
+    </script>
+</body>
+</html>
+<p>Nombre:Lopez Quintana Alexa Camila</p>
+
